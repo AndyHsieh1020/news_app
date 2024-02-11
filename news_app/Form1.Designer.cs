@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.flowLayout_news = new System.Windows.Forms.FlowLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.timepicker = new System.Windows.Forms.DateTimePicker();
+            this.filter_grpbox = new System.Windows.Forms.GroupBox();
+            this.CNA = new System.Windows.Forms.CheckBox();
+            this.UDN = new System.Windows.Forms.CheckBox();
+            this.Money = new System.Windows.Forms.CheckBox();
+            this.CTEE = new System.Windows.Forms.CheckBox();
+            this.LTN = new System.Windows.Forms.CheckBox();
+            this.CHT = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.search_str = new System.Windows.Forms.TextBox();
             this.nxt_page = new System.Windows.Forms.Button();
             this.last_page = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.filter_grpbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayout_news
@@ -55,98 +55,99 @@
             this.flowLayout_news.TabIndex = 0;
             this.flowLayout_news.WrapContents = false;
             // 
-            // dateTimePicker1
+            // timepicker
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 76);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(258, 33);
-            this.dateTimePicker1.TabIndex = 1;
+            this.timepicker.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.timepicker.Location = new System.Drawing.Point(6, 76);
+            this.timepicker.Name = "timepicker";
+            this.timepicker.Size = new System.Drawing.Size(258, 33);
+            this.timepicker.TabIndex = 1;
+            this.timepicker.ValueChanged += new System.EventHandler(this.timepicker_ValueChanged);
             // 
-            // groupBox1
+            // filter_grpbox
             // 
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox1.Location = new System.Drawing.Point(518, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 293);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "搜索";
+            this.filter_grpbox.Controls.Add(this.CNA);
+            this.filter_grpbox.Controls.Add(this.UDN);
+            this.filter_grpbox.Controls.Add(this.Money);
+            this.filter_grpbox.Controls.Add(this.CTEE);
+            this.filter_grpbox.Controls.Add(this.LTN);
+            this.filter_grpbox.Controls.Add(this.CHT);
+            this.filter_grpbox.Controls.Add(this.label1);
+            this.filter_grpbox.Controls.Add(this.search_str);
+            this.filter_grpbox.Controls.Add(this.timepicker);
+            this.filter_grpbox.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.filter_grpbox.Location = new System.Drawing.Point(518, 12);
+            this.filter_grpbox.Name = "filter_grpbox";
+            this.filter_grpbox.Size = new System.Drawing.Size(270, 293);
+            this.filter_grpbox.TabIndex = 2;
+            this.filter_grpbox.TabStop = false;
+            this.filter_grpbox.Text = "搜索";
             // 
-            // checkBox6
+            // CNA
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox6.Location = new System.Drawing.Point(10, 256);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(66, 21);
-            this.checkBox6.TabIndex = 9;
-            this.checkBox6.Text = "中央社";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.CNA.AutoSize = true;
+            this.CNA.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.CNA.Location = new System.Drawing.Point(10, 256);
+            this.CNA.Name = "CNA";
+            this.CNA.Size = new System.Drawing.Size(66, 21);
+            this.CNA.TabIndex = 9;
+            this.CNA.Text = "中央社";
+            this.CNA.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // UDN
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox5.Location = new System.Drawing.Point(10, 228);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(66, 21);
-            this.checkBox5.TabIndex = 8;
-            this.checkBox5.Text = "聯合報";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.UDN.AutoSize = true;
+            this.UDN.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.UDN.Location = new System.Drawing.Point(10, 228);
+            this.UDN.Name = "UDN";
+            this.UDN.Size = new System.Drawing.Size(66, 21);
+            this.UDN.TabIndex = 8;
+            this.UDN.Text = "聯合報";
+            this.UDN.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // Money
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox4.Location = new System.Drawing.Point(10, 200);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(79, 21);
-            this.checkBox4.TabIndex = 7;
-            this.checkBox4.Text = "經濟日報";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.Money.AutoSize = true;
+            this.Money.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Money.Location = new System.Drawing.Point(10, 200);
+            this.Money.Name = "Money";
+            this.Money.Size = new System.Drawing.Size(79, 21);
+            this.Money.TabIndex = 7;
+            this.Money.Text = "經濟日報";
+            this.Money.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // CTEE
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox3.Location = new System.Drawing.Point(10, 172);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(79, 21);
-            this.checkBox3.TabIndex = 6;
-            this.checkBox3.Text = "工商時報";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.CTEE.AutoSize = true;
+            this.CTEE.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.CTEE.Location = new System.Drawing.Point(10, 172);
+            this.CTEE.Name = "CTEE";
+            this.CTEE.Size = new System.Drawing.Size(79, 21);
+            this.CTEE.TabIndex = 6;
+            this.CTEE.Text = "工商時報";
+            this.CTEE.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // LTN
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox2.Location = new System.Drawing.Point(10, 144);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 21);
-            this.checkBox2.TabIndex = 5;
-            this.checkBox2.Text = "自由時報";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.LTN.AutoSize = true;
+            this.LTN.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LTN.Location = new System.Drawing.Point(10, 144);
+            this.LTN.Name = "LTN";
+            this.LTN.Size = new System.Drawing.Size(79, 21);
+            this.LTN.TabIndex = 5;
+            this.LTN.Text = "自由時報";
+            this.LTN.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // CHT
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox1.Location = new System.Drawing.Point(10, 116);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 21);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "中國時報";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CHT.AutoSize = true;
+            this.CHT.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.CHT.Location = new System.Drawing.Point(10, 116);
+            this.CHT.Name = "CHT";
+            this.CHT.Size = new System.Drawing.Size(79, 21);
+            this.CHT.TabIndex = 4;
+            this.CHT.Text = "中國時報";
+            this.CHT.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -160,12 +161,12 @@
             this.label1.Text = "關鍵字:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // search_str
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 39);
-            this.textBox1.TabIndex = 2;
+            this.search_str.Location = new System.Drawing.Point(83, 31);
+            this.search_str.Name = "search_str";
+            this.search_str.Size = new System.Drawing.Size(181, 39);
+            this.search_str.TabIndex = 2;
             // 
             // nxt_page
             // 
@@ -176,6 +177,7 @@
             this.nxt_page.TabIndex = 3;
             this.nxt_page.Text = "下一頁";
             this.nxt_page.UseVisualStyleBackColor = true;
+            this.nxt_page.Click += new System.EventHandler(this.nxt_page_Click);
             // 
             // last_page
             // 
@@ -186,6 +188,7 @@
             this.last_page.TabIndex = 4;
             this.last_page.Text = "上一頁";
             this.last_page.UseVisualStyleBackColor = true;
+            this.last_page.Click += new System.EventHandler(this.last_page_Click);
             // 
             // Form1
             // 
@@ -194,13 +197,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.last_page);
             this.Controls.Add(this.nxt_page);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.filter_grpbox);
             this.Controls.Add(this.flowLayout_news);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "新聞入口";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.filter_grpbox.ResumeLayout(false);
+            this.filter_grpbox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -208,16 +211,16 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayout_news;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker timepicker;
+        private System.Windows.Forms.GroupBox filter_grpbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox search_str;
+        private System.Windows.Forms.CheckBox CNA;
+        private System.Windows.Forms.CheckBox UDN;
+        private System.Windows.Forms.CheckBox Money;
+        private System.Windows.Forms.CheckBox CTEE;
+        private System.Windows.Forms.CheckBox LTN;
+        private System.Windows.Forms.CheckBox CHT;
         private System.Windows.Forms.Button nxt_page;
         private System.Windows.Forms.Button last_page;
     }

@@ -29,6 +29,15 @@ namespace news_app
             load_news(page=0);
         }
 
+        private  void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                clear_flowlayout();
+                load_news(page = 0);
+            }
+        }
+
         public void clear_flowlayout()
         {
             List<Control> listControls = new List<Control>();
@@ -55,12 +64,14 @@ namespace news_app
             CTEE.CheckedChanged += filter_checkbox_change;
             CNA.CheckedChanged += filter_checkbox_change;
             Money.CheckedChanged += filter_checkbox_change;
+            search_str.KeyPress += TextBox_KeyPress;
 
 
             load_news(page);
 
 
         }
+
         //上一頁按鈕
         private void last_page_Click(object sender, EventArgs e)
         {
